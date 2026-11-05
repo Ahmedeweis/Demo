@@ -4,3 +4,83 @@
 html {
   scroll-behavior: smooth;
 }
+
+@font-face {
+  font-family: "Involve";
+  src: url("./assets/URWGothicL-Demi.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Involve";
+  src: url("./assets/Involve-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "spaciaz-icon";
+  src: url("./assets/spaciaz-icon-1.2.3.woff2") format("woff2");
+  font-display: block;
+}
+
+.site-icon {
+  display: inline-block;
+  font-family: "spaciaz-icon";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Project page: type scale and buttons from the reference page's CSS */
+/* Unlayered on purpose: normalize.css in App.vue is unlayered and would override layered rules */
+.site-container {
+  @apply mx-auto w-full max-w-[1350px] px-[30px];
+}
+
+.site-h2,
+.site-h3,
+.site-h5,
+.site-h6 {
+  @apply font-site-heading font-bold text-site-ink;
+}
+
+.site-h2 {
+  font-size: clamp(45px, 5.5vmax, 70px);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.site-h3 {
+  font-size: clamp(36px, 5vmax, 52px);
+  line-height: 1.0384615385;
+  letter-spacing: -1px;
+}
+
+.site-h5 {
+  font-size: 26px;
+  line-height: 1.2307692308;
+}
+
+.site-h6 {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.site-button {
+  @apply inline-flex items-center rounded-[30px] bg-site-primary px-[30px] py-[14px] font-site-heading text-sm font-bold capitalize leading-[1.7142857143] text-site-ink transition-colors hover:bg-site-primary-hover cursor-pointer;
+}
+
+.site-button-icon {
+  @apply gap-[15px] py-[5px] pr-[5px] pl-[30px];
+}
+
+.site-field {
+  @apply w-full rounded-[30px] border border-site-field bg-site-field px-[30px] py-[15px] text-base leading-[1.75] text-site-ink outline-none transition-colors focus:border-site-ink;
+}

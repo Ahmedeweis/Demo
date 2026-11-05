@@ -21,6 +21,19 @@ module.exports = {
         'nuvica-gray': '#4A6581',
         'nuvica-bg-start': '#CBE0F2',
         'nuvica-bg-end': '#FFFFFF',
+        // Project page palette, taken from the reference page's CSS
+        'site-primary': '#E4ED64',
+        'site-primary-hover': '#CDD55A',
+        'site-ink': '#000000',
+        'site-text': '#4B4B4B',
+        'site-muted': '#8A8A8A',
+        'site-line': '#E0E0E0',
+        'site-soft': '#F6F3EC',
+        'site-field': '#F2F2F2',
+      },
+      fontFamily: {
+        site: ['Switzer', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        'site-heading': ['Involve', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
       },
       animation: {
         'float-slow': 'float 6s ease-in-out infinite',

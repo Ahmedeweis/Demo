@@ -1,22 +1,26 @@
 {
-    "name": "Nahg Al-Tanfeez Business Services",
-    "short_name": "Nahg",
-    "description": "Strategic Transformation Partner for Non-Profit Organizations in Saudi Arabia",
+    "name": "Greenview Apartments – Spaciaz",
+    "short_name": "Spaciaz",
+    "description": "Greenview Apartments project details: overview, features, media, location, and enquiries.",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#F2F4F5",
-    "theme_color": "#002D2D",
-    "orientation": "portrait",
+    "background_color": "#FFFFFF",
+    "theme_color": "#1B1F12",
     "icons": [
         {
-            "src": "/logo.webp",
-            "sizes": "192x192 512x512",
-            "type": "image/webp"
+            "src": "/icons/spaciaz-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
         },
         {
-            "src": "/logo.png",
-            "sizes": "192x192 512x512",
+            "src": "/icons/spaciaz-512.png",
+            "sizes": "512x512",
             "type": "image/png"
+        },
+        {
+            "src": "/logo_icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
         }
     ]
 }

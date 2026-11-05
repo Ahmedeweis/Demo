@@ -1,15 +1,15 @@
 <template>
     <section class="mb-[60px]" aria-labelledby="media-heading">
         <div class="site-container">
-            <h2 id="media-heading" class="site-h3">Media</h2>
+            <h2 id="media-heading" class="site-h3 text-[clamp(42px,5.8vmax,60px)]!">Media</h2>
 
-            <div role="tablist" aria-label="Media type" class="mt-6 md:-mt-[45px] flex flex-wrap justify-start md:justify-end gap-2.5">
+            <div role="tablist" aria-label="Media type" class="mt-6 md:-mt-[55px] flex flex-wrap justify-start md:justify-end gap-2.5">
                 <button v-for="tab in tabs" :id="`media-tab-${tab.id}`" :key="tab.id" type="button" role="tab"
                     :aria-selected="activeTab === tab.id" :aria-controls="`media-panel-${tab.id}`"
-                    class="inline-flex items-center gap-2 rounded-[30px] border px-[30px] py-3 text-base! leading-6! font-semibold text-site-ink transition-colors cursor-pointer"
+                    class="inline-flex items-center gap-2.5 rounded-[30px] border px-[30px] py-3 font-site-heading! capitalize! text-base! leading-6! font-bold text-site-ink transition-colors cursor-pointer"
                     :class="activeTab === tab.id ? 'border-site-primary bg-site-primary' : 'border-site-line hover:border-site-primary hover:bg-site-primary'"
                     @click="activeTab = tab.id">
-                    <SiteIcon :name="tab.icon" class="text-base" />
+                    <SiteIcon :name="tab.icon" class="text-2xl" />
                     {{ tab.label }}
                 </button>
             </div>

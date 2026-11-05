@@ -4,25 +4,26 @@
 
     <div class="relative flex min-h-[350px] flex-col justify-end bg-cover bg-center" :style="{ backgroundImage: `url(${heroImage})` }">
       <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
-      <div class="relative mb-10 px-[30px]">
+      <div class="relative mb-10 px-[15px] md:px-[30px]">
         <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-2.5 text-sm font-semibold leading-5 text-white/60">
           <a href="#" class="transition-colors hover:text-white">Home</a>
           <span class="size-0.5 rounded-full bg-white/60" aria-hidden="true"></span>
           <span aria-current="page">{{ project.title }}</span>
         </nav>
       </div>
-      <div class="relative h-[50px] rounded-t-[50px] bg-white" aria-hidden="true"></div>
+      <div class="relative h-[30px] rounded-t-[20px] bg-white md:h-[50px] md:rounded-t-[50px]" aria-hidden="true"></div>
     </div>
 
-    <div class="site-container pt-[52px]">
-      <a href="#location" class="inline-flex items-center gap-2.5 text-sm font-semibold text-site-ink transition-colors hover:text-site-muted">
-        <SiteIcon name="marker" class="text-xl text-site-primary-hover" />
+    <div class="site-container pt-[50px] md:pt-[52px]">
+      <a href="#location" class="flex w-fit items-center gap-3.5 text-base font-semibold leading-[1.5] text-site-ink transition-colors hover:text-site-muted">
+        <SiteIcon name="marker" class="text-2xl text-site-primary" />
         {{ project.location }}
       </a>
-      <h1 class="site-h2 mt-5! mb-0!">{{ project.title }}</h1>
+      <h1 class="site-h2 mt-[22px]! mb-0! md:mt-[27px]!">{{ project.title }}</h1>
 
-      <dl class="mt-10 mb-[50px] flex flex-wrap gap-x-[65px] gap-y-[30px] border-t border-site-line pt-10">
-        <div v-for="item in project.overview" :key="item.key" class="flex items-center gap-[15px]">
+      <dl class="mt-[33px] mb-[50px] flex flex-wrap gap-x-[30px] gap-y-[30px] border-t border-site-line pt-[45px] md:mt-10 md:pt-10 min-[55.0625rem]:gap-x-[65px]">
+        <div v-for="item in project.overview" :key="item.key"
+          class="flex w-[45%] flex-col items-center gap-[15px] text-center md:w-[35%] md:flex-row md:text-left min-[55.0625rem]:w-[30%] min-[64.0625rem]:w-[28%] min-[75.0625rem]:w-auto">
           <span class="flex size-[62px] shrink-0 items-center justify-center rounded-full border border-site-line text-site-ink">
             <SiteIcon :name="item.icon" class="text-2xl" />
           </span>
@@ -84,10 +85,10 @@
             <h3 class="mb-5 text-xs font-semibold uppercase leading-[1.167] text-site-ink">address</h3>
             <div class="flex flex-wrap items-center justify-between gap-5 border-b border-site-line pb-[30px]">
               <p class="site-h5 max-w-[250px]">{{ project.address }}</p>
-              <a href="#request-info" class="site-button site-button-icon">
+              <a href="#request-info" class="site-button site-button-icon site-button-outline">
                 get direction
-                <span class="flex size-[50px] items-center justify-center rounded-full bg-white">
-                  <SiteIcon name="arrow-long-right" class="-rotate-45 text-[13px]" />
+                <span class="flex size-[50px] items-center justify-center rounded-full bg-site-primary">
+                  <ButtonArrow />
                 </span>
               </a>
             </div>
@@ -108,13 +109,13 @@
 
     <div class="site-container pb-[100px]">
       <nav aria-label="Project navigation" class="mt-5 grid grid-cols-2 divide-x divide-site-line rounded-[30px] border border-site-line">
-        <a href="#" :title="project.previousProject" class="flex h-[70px] items-center justify-center gap-2 text-center text-base font-semibold text-site-ink transition-colors hover:text-site-muted">
-          <SiteIcon name="chevron-left" class="text-sm text-site-primary-hover" />
+        <a href="#" :title="project.previousProject" class="flex min-h-[70px] items-center justify-center gap-2 px-[15px] text-center text-xl font-bold leading-none text-site-ink hover:underline">
+          <SiteIcon name="chevron-left" class="text-xl text-site-primary" />
           previous project
         </a>
-        <a href="#" :title="project.nextProject" class="flex h-[70px] items-center justify-center gap-2 text-center text-base font-semibold text-site-ink transition-colors hover:text-site-muted">
+        <a href="#" :title="project.nextProject" class="flex min-h-[70px] items-center justify-center gap-2 px-[15px] text-center text-xl font-bold leading-none text-site-ink hover:underline">
           next project
-          <SiteIcon name="chevron-right" class="text-sm text-site-primary-hover" />
+          <SiteIcon name="chevron-right" class="text-xl text-site-primary" />
         </a>
       </nav>
     </div>
@@ -126,6 +127,7 @@
 <script setup>
 import featuredImage from '../assets/imgs/Greenview Apartments.png'
 import heroImage from '../assets/imgs/hero.png'
+import ButtonArrow from '../components/project/ButtonArrow.vue'
 import InquiryForm from '../components/project/InquiryForm.vue'
 import MediaGallery from '../components/project/MediaGallery.vue'
 import SiteFooter from '../components/project/SiteFooter.vue'

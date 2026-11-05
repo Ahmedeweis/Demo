@@ -3,10 +3,10 @@ export const phone = '+(084) 123 - 456 88'
 export const phoneHref = phone.replace(/[^\d+]/g, '')
 
 export const navItems = [
-  { label: 'Demos', mega: true, children: Array.from({ length: 10 }, (_, i) => `Home ${i + 1}`) },
+  { label: 'Demos', mega: true, children: ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'].map((n) => `Home ${n}`) },
   { label: 'Pages', children: ['About Us', 'Core Values', 'Our Awards', 'Our Team', 'Team Single', 'Careers', 'FAQs', 'Error Page'] },
   { label: 'Services', children: ['Services Style 01', 'Services Style 02', 'Services Style 03', 'Service Details'] },
-  { label: 'Projects', children: ['Projects Grid Style', 'Projects List Style', 'Project Details'] },
+  { label: 'Projects', active: true, children: ['Projects Grid Style', 'Projects List Style', 'Project Details'] },
   { label: 'News', children: ['News Gridview', 'News Listview', 'Single Post'] },
   { label: 'Contact', children: [] },
 ]

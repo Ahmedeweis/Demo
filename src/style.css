@@ -41,7 +41,7 @@ html {
 /* Project page: type scale and buttons from the reference page's CSS */
 /* Unlayered on purpose: normalize.css in App.vue is unlayered and would override layered rules */
 .site-container {
-  @apply mx-auto w-full max-w-[1350px] px-[30px];
+  @apply mx-auto w-full max-w-[1350px] px-[15px] md:px-[30px];
 }
 
 .site-h2,
@@ -74,13 +74,56 @@ html {
 }
 
 .site-button {
-  @apply inline-flex items-center rounded-[30px] bg-site-primary px-[30px] py-[14px] font-site-heading text-sm font-bold capitalize leading-[1.7142857143] text-site-ink transition-colors hover:bg-site-primary-hover cursor-pointer;
+  @apply inline-flex items-center rounded-[30px] bg-site-primary px-[30px] py-[14px] font-site-heading text-sm font-bold capitalize leading-[1.7142857143] text-site-ink transition-colors duration-300 hover:bg-site-ink hover:text-white cursor-pointer;
 }
 
 .site-button-icon {
-  @apply gap-[15px] py-[5px] pr-[5px] pl-[30px];
+  @apply gap-2.5 py-[5px] pr-[5px] pl-[30px];
+}
+
+.site-button-outline {
+  @apply border border-site-line bg-transparent hover:border-site-ink hover:bg-site-ink;
+}
+
+.site-arrow {
+  position: relative;
+  display: flex;
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #000;
+  font-size: 13px;
+}
+
+.site-arrow-out,
+.site-arrow-in {
+  transition: transform 0.35s linear;
+}
+
+.site-arrow-out {
+  transform: rotate(-45deg);
+}
+
+.site-arrow-in {
+  position: absolute;
+  transform: translate3d(-17px, 17px, 0) scale3d(0.2, 0.2, 1) rotate(-45deg);
+}
+
+.site-button:hover .site-arrow-out {
+  transform: translate3d(17px, -17px, 0) scale3d(0.2, 0.2, 1) rotate(-45deg);
+}
+
+.site-button:hover .site-arrow-in {
+  transform: rotate(-45deg);
 }
 
 .site-field {
   @apply w-full rounded-[30px] border border-site-field bg-site-field px-[30px] py-[15px] text-base leading-[1.75] text-site-ink outline-none transition-colors focus:border-site-ink;
+}
+
+.site-field::placeholder {
+  color: #000;
+  opacity: 1;
 }

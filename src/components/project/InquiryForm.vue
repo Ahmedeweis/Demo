@@ -14,7 +14,7 @@
                 <button type="submit" class="site-button site-button-icon">
                     submit
                     <span class="flex size-[50px] items-center justify-center rounded-full bg-white">
-                        <SiteIcon name="arrow-long-right" class="-rotate-45 text-[13px]" />
+                        <ButtonArrow />
                     </span>
                 </button>
             </div>
@@ -25,7 +25,7 @@
 <script setup>
 import { reactive } from 'vue'
 import { useToast } from 'vue-toastification'
-import SiteIcon from './SiteIcon.vue'
+import ButtonArrow from './ButtonArrow.vue'
 
 const emptyForm = { firstName: '', lastName: '', email: '', message: '' }
 

@@ -10,9 +10,11 @@ defineProps({
 // Code points in spaciaz-icon-1.2.3.woff2, keyed by the theme's own icon names
 const glyphs = {
     'arrow-long-right': '\ue002',
+    'arrow-up': '\ue03f',
     'bars': '\ue041',
     'buliding-2': '\ue006',
     'calendar-2': '\ue007',
+    'chevron-down': '\ue00b',
     'chevron-left': '\ue00c',
     'chevron-right': '\ue00d',
     'dollar-circle': '\ue011',

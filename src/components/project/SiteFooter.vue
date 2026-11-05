@@ -1,7 +1,7 @@
 <template>
     <footer class="relative overflow-hidden bg-[#1d211c] bg-cover bg-no-repeat pb-[30px] font-site" :style="{ backgroundImage: `url(${footerImage})` }">
         <div class="absolute inset-0 bg-black/60" aria-hidden="true"></div>
-        <div class="relative h-[50px] rounded-b-[80px] bg-white" aria-hidden="true"></div>
+        <div class="relative h-[30px] rounded-b-[20px] bg-white md:h-[50px] md:rounded-b-[80px]" aria-hidden="true"></div>
 
         <div class="relative site-container flex flex-col items-center text-center text-white">
             <h2 class="mt-20 mb-3 max-w-[526px] font-site-heading text-[42px] font-bold leading-[1.06] tracking-[-1px] md:text-[56px] xl:text-[70px] xl:tracking-[-2px]">
@@ -20,7 +20,7 @@
         </div>
 
         <div class="relative px-[30px]">
-            <div class="rounded-[40px] bg-white px-[30px] pt-[60px] pb-10">
+            <div class="rounded-[20px] bg-white px-[15px] pt-[30px] pb-10 md:rounded-[40px] md:px-[30px] md:pt-[60px]">
                 <div class="mx-auto max-w-[1290px]">
                 <div class="grid border-b border-site-line pb-[60px] gap-y-10 lg:grid-cols-3">
                     <div class="flex flex-col justify-between gap-[30px] pb-5 lg:pr-10">
@@ -41,7 +41,7 @@
                     <div class="flex flex-col justify-between gap-[30px] pb-5 lg:pl-10">
                         <div class="flex flex-col gap-2">
                             <a :href="`tel:${phoneHref}`" class="text-[26px] font-semibold lowercase leading-[1.5] tracking-[-2px] text-site-ink xl:text-4xl">{{ phone }}</a>
-                            <a href="mailto:info@example.com" class="text-[26px] font-semibold lowercase leading-[1.5] tracking-[-2px] text-site-ink xl:text-4xl">info@example.com</a>
+                            <a href="mailto:spaciaz@example.com" class="text-[26px] font-semibold lowercase leading-[1.5] tracking-[-2px] text-site-ink xl:text-4xl">spaciaz@example.com</a>
                         </div>
                         <ul class="flex flex-wrap gap-x-3 text-sm font-semibold leading-5 text-site-muted">
                             <li v-for="social in socials" :key="social"><a href="#" class="transition-colors hover:text-site-ink">{{ social }}</a></li>
